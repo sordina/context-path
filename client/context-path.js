@@ -20,6 +20,7 @@ Template.content.rendered = function() {
 
 Template.output.startx   = function() { try { return Session.get('path')[0].x } catch(e) {} }
 Template.output.starty   = function() { try { return Session.get('path')[0].y } catch(e) {} }
+Template.output.title    = function() { return $('h1 input').val() || "MyRule" }
 
 Template.output.segments = function() {
 	try {

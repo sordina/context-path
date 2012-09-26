@@ -10,12 +10,15 @@
 
 	<div id="left">
 		<form id="settings">
-				<table>
-						<tr><td>Point</td>
-								<td><input type="radio" name="tool" value="point" checked="checked" /></td></tr>
-						 <tr><td>Eraser</td>
-								 <td><input type="radio" name="tool" value="eraser" /></td></tr>
-				</table>
+			<h1><input type="text" value="MyRule" /></h1>
+			<p>
+				<label for="toolpoint">Point</label>  <input id="toolpoint" type="radio" name="tool" value="point" checked="checked" />
+				<label for="toolerase">Eraser</label> <input id="toolerase" type="radio" name="tool" value="eraser" />
+				&nbsp; &nbsp; &nbsp;
+				<label for="scale">Scale</label> <input id="scale" name="scale" type="text" />
+				&nbsp; &nbsp; &nbsp;
+				<label for="background">Background</label> <input id="background" name="background" type="text" />
+			</p>
 		</form>
 
 		<pre id="output">{{> output }}</pre>
@@ -25,12 +28,13 @@
 </template>
 
 <template name="output">
-  path box { MOVETO( {{ startx }} , {{ starty }} )
-    {{#each segments}}
-    {{> segment }}{{/each}}
+path {{ title }} {
+  MOVETO{ x {{ startx }} y {{ starty }} }
+  {{#each segments}}
+  {{> segment }}{{/each}}
 
-           CLOSEPOLY()
-           FILL() }
+  FILL{}
+}
 </template>
 
-<template name="segment"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LINETO( {{ x }} , {{ y }} ) </template>
+<template name="segment"> LINETO{ x {{ x }} y {{ y }} } </template>

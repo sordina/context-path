@@ -9,7 +9,7 @@ body {
 	position: absolute;
 }
 
-#left  { left: 0; border-right: 2px solid black; margin-left: -2px; background: blue; }
+#left  { left: 0; border-right: 2px solid black; margin-left: -2px; background: #abc; }
 #right { right: 0; }
 
 canvas {
@@ -29,8 +29,23 @@ form {
 	padding: 20px;
 	background: #cba;
 	margin: 0;
+	text-align: center;
 }
 
 form td {
 	padding-right: 1em;
+}
+
+p input[type=text] {
+	width: 60px;
+}
+
+h1 {
+	text-align: center;
+}
+
+h1 input {
+	font-size: 200%;
+	width: 80%;
+	text-align: center;
 }
