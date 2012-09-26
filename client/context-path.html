@@ -1,42 +1,12 @@
 <head>
-  <title>context-path</title>
+  <title>Context Path - Context-Free.org Shape Sketching</title>
 </head>
 
 <body>
-	{{> content }}
-</body>
-
-<template name="content">
-
 	<div id="left">
-		<form id="settings">
-			<h1><input type="text" value="MyRule" /></h1>
-			<p>
-				<label for="toolpoint">Point</label>  <input id="toolpoint" type="radio" name="tool" value="point" checked="checked" />
-				<label for="toolerase">Eraser</label> <input id="toolerase" type="radio" name="tool" value="eraser" />
-				&nbsp; &nbsp; &nbsp;
-				<label for="newstyle">New Style?</label> <input id="newstyle" checked="checked" type="checkbox" name="newstyle" />
-				&nbsp; &nbsp; &nbsp;
-				<label for="scale">Scale</label> <input id="scale" name="scale" type="text" />
-				&nbsp; &nbsp; &nbsp;
-				<label for="background">Background</label> <input id="background" name="background" type="text" />
-			</p>
-		</form>
-
-		<pre id="output">{{> output }}</pre>
+		{{> options}}
+		{{> output}}
 	</div>
 
-	<canvas id="right" />
-</template>
-
-<template name="output">
-path {{ title }} {
-  MOVETO ( {{ startx }} , {{ starty }} )
-  {{#each segments}}
-  {{> segment }}{{/each}}
-
-  FILL []
-}
-</template>
-
-<template name="segment"> LINETO ( {{ x }} , {{ y }} ) </template>
+	{{> svg }}
+</body>

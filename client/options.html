@@ -1,0 +1,25 @@
+<template name="options">
+	<form id="settings">
+		<h1><input id="title" type="text" value="MyRule" /></h1>
+		<p id="stats">{{> stats }}</p>
+		<p>
+			<label for="toolpoint">Point</label>
+			<input id="toolpoint" type="radio" name="tool" value="point" checked="checked" />
+
+			<label for="toolerase">Eraser</label>
+			<input id="toolerase" type="radio" name="tool" value="eraser" />
+			&nbsp; &nbsp; &nbsp;
+
+			<label for="newstyle">New Style?</label>
+			<input id="newstyle" checked="checked" type="checkbox" name="newstyle" />
+			&nbsp; &nbsp; &nbsp;
+
+			<label for="wrapper">Wrapper?</label>
+			<input id="wrapper" type="checkbox" name="wrapper" />
+			&nbsp; &nbsp; &nbsp;
+
+			<label for="scale">Scale</label>
+			<input id="scale" name="scale" type="text" />
+		</p>
+	</form>
+</template>

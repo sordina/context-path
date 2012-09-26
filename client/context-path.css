@@ -3,20 +3,20 @@ body {
 	margin: 0;
 }
 
-#left, #right {
+#left, #svg {
 	width: 50%;
-	min-height: 100%;
 	position: absolute;
+	overflow: auto;
 }
 
-#left  { left: 0; border-right: 2px solid black; margin-left: -2px; background: #abc; }
-#right { right: 0; }
+#left   { height: 100%; left: 0; border-right: 2px solid black; margin-left: -2px; background: #abc; }
 
-canvas {
-	margin: 0;
-	background: #eef;
-	width: 100%;
+#svg {
 	height: 100%;
+	width:  50%;
+	right: 0;
+	top: 0;
+	background: #eef;
 }
 
 #output {

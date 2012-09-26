@@ -1,0 +1,17 @@
+
+
+<template name="output">
+
+<pre id="output">
+path {{ title }} {
+  MOVETO ( {{ startx }} , {{ starty }} )
+  {{#each segments}}
+  {{> segment }}{{/each}}
+
+  FILL []
+}
+</pre>
+
+</template>
+
+<template name="segment"> LINETO ( {{ x }} , {{ y }} ) </template>
