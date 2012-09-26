@@ -15,6 +15,8 @@
 				<label for="toolpoint">Point</label>  <input id="toolpoint" type="radio" name="tool" value="point" checked="checked" />
 				<label for="toolerase">Eraser</label> <input id="toolerase" type="radio" name="tool" value="eraser" />
 				&nbsp; &nbsp; &nbsp;
+				<label for="newstyle">New Style?</label> <input id="newstyle" checked="checked" type="checkbox" name="newstyle" />
+				&nbsp; &nbsp; &nbsp;
 				<label for="scale">Scale</label> <input id="scale" name="scale" type="text" />
 				&nbsp; &nbsp; &nbsp;
 				<label for="background">Background</label> <input id="background" name="background" type="text" />
@@ -29,12 +31,12 @@
 
 <template name="output">
 path {{ title }} {
-  MOVETO{ x {{ startx }} y {{ starty }} }
+  MOVETO ( {{ startx }} , {{ starty }} )
   {{#each segments}}
   {{> segment }}{{/each}}
 
-  FILL{}
+  FILL []
 }
 </template>
 
-<template name="segment"> LINETO{ x {{ x }} y {{ y }} } </template>
+<template name="segment"> LINETO ( {{ x }} , {{ y }} ) </template>
