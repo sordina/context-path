@@ -1,0 +1,36 @@
+<head>
+  <title>context-path</title>
+</head>
+
+<body>
+	{{> content }}
+</body>
+
+<template name="content">
+
+	<div id="left">
+		<form id="settings">
+				<table>
+						<tr><td>Point</td>
+								<td><input type="radio" name="tool" value="point" checked="checked" /></td></tr>
+						 <tr><td>Eraser</td>
+								 <td><input type="radio" name="tool" value="eraser" /></td></tr>
+				</table>
+		</form>
+
+		<pre id="output">{{> output }}</pre>
+	</div>
+
+	<canvas id="right" />
+</template>
+
+<template name="output">
+  path box { MOVETO( {{ startx }} , {{ starty }} )
+    {{#each segments}}
+    {{> segment }}{{/each}}
+
+           CLOSEPOLY()
+           FILL() }
+</template>
+
+<template name="segment"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LINETO( {{ x }} , {{ y }} ) </template>
