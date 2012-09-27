@@ -38,3 +38,4 @@ function textfield(id) {
 	object[ "keyup #" + id ] = function() { Session.set( id, $("#" + id).val() ) }
 	return object
 }
+
