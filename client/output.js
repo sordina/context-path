@@ -43,13 +43,10 @@ var SH4 = { scaled : function(p) {
                                     , y : (SH1.miny() - y - dy2) / SH3.scale()
                                     }
 
-                       console.log(result)
                        return result
            } }
 
 StatsHelpers = merge([ SH1, SH2, SH3, SH4 ])
-
-Template.stats.helpers( StatsHelpers )
 
 function bound(f,i){
 	return function() {
