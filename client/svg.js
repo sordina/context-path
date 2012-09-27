@@ -9,9 +9,7 @@ Template.svg.rendered = function() {
 	var pairs = _.map( points,  function(e) {   return "" + e.x + "," + e.y } )
 	var ptext = _.reduce(pairs, function(u, e){ return u + " " + e }, "")
 
-	console.log(ptext)
-
-	var p     = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+	var p = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
 	    p.setAttribute("fill",   'red')
 	    p.setAttribute("points", ptext)
 

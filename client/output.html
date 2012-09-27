@@ -3,12 +3,31 @@
 <template name="output">
 
 <pre id="output">
+{{#if wrapper}}
+startshape {{ title }}_wrap
+
+shape {{ title }}_wrap {
+  {{ title }} [h 200 b 0.5 sat 1]
+}
+
+{{/if}}
 path {{ title }} {
+{{#if scale}}
+  MOVETO ( {{ startx_scale }} , {{ starty_scale }} )
+{{else}}
   MOVETO ( {{ startx }} , {{ starty }} )
+{{/if}}{{#if scale}}
+  {{#each segments_scale}}
+  {{> segment }}{{/each}}
+{{else}}
   {{#each segments}}
   {{> segment }}{{/each}}
-
+{{/if}}
+{{#if newstyle}}
   FILL []
+{{else}}
+  FILL {}
+{{/if}}
 }
 </pre>
 

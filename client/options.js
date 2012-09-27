@@ -4,16 +4,16 @@ Template.options.events( merge([ setter('tool', 'toolpoint', point)
                                , setter('tool', 'toolerase', erase)
                                , checkbox('newstyle')
                                , checkbox('wrapper')
-                               , textfield('scale')
+                               , checkbox('scale')
                                , textfield('title')
                                ]))
 
 // Defaults
 //
-Session.set('points',   [])
 Session.set('tool',     point)
 Session.set('title',    "MyRule")
 Session.set('newstyle', true)
+Session.set('scale',    true)
 
 // Sets a session key to a value when x is clicked
 //
@@ -27,7 +27,7 @@ function setter(name, id, value ) {
 //
 function checkbox(id) {
 	var object = {}
-	object[ "click #" + id ] = function() { Session.set( id, $("#" + id).val() ) }
+	object[ "click #" + id ] = function() { Session.set( id, $("#" + id).is(':checked')) }
 	return object
 }
 

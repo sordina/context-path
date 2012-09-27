@@ -55,6 +55,10 @@ p input[type=text] {
 	width: 60px;
 }
 
+#stats p {
+  line-height: 1em;
+}
+
 h1 {
 	text-align: center;
 }
