@@ -1,7 +1,11 @@
 
 
 <template name="svg">
-	<svg id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1">
+	{{ title }}
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+	  <desc>ContextFree Path</desc>
+
 		{{#each points}}
 			<circle cx="{{x}}" cy="{{y}}" r="5" fill="black" />
 		{{/each}}

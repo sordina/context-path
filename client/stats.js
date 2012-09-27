@@ -1,9 +1,10 @@
 
 
-Template.stats.minx = bound(_.min, 'x')
-Template.stats.miny = bound(_.min, 'y')
-Template.stats.maxx = bound(_.max, 'x')
-Template.stats.maxy = bound(_.max, 'y')
+Template.stats.helpers({ minx : bound(_.min, 'x')
+                       , miny : bound(_.min, 'y')
+                       , maxx : bound(_.max, 'x')
+                       , maxy : bound(_.max, 'y')
+                      })
 
 function bound(f,i){
 	return function() {

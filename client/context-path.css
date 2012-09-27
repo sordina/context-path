@@ -9,7 +9,13 @@ body {
 	overflow: auto;
 }
 
-#left   { height: 100%; left: 0; border-right: 2px solid black; margin-left: -2px; background: #abc; }
+#left   {
+	height: 100%;
+	left: 0;
+	border-right: 2px solid black;
+	margin-left: -2px;
+	background: #abc;
+}
 
 #svg {
 	height: 100%;
