@@ -9,6 +9,15 @@ body {
 	overflow: auto;
 }
 
+.big {
+	font-size: 500%;
+	font-weight: bold;
+	font-family: monospace;
+	position: relative;
+	top: 10px;
+	left: 15px;
+}
+
 #left   {
 	height: 100%;
 	left: 0;
