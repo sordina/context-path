@@ -39,8 +39,8 @@ var SH4 = { scaled : function(p) {
                        var y     = p.y
                        var scale = SH3.scale()
 
-                       var result = { x : (x + dx2 - SH1.minx()) / SH3.scale()
-                                    , y : (SH1.miny() - y - dy2) / SH3.scale()
+                       var result = { x : (x - dx2 - SH1.minx()) / SH3.scale()
+                                    , y : (SH1.miny() + dy2 - y) / SH3.scale()
                                     }
 
                        return result

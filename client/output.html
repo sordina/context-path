@@ -24,6 +24,7 @@ path {{ title }} {
   {{> segment }}{{/each}}
 {{/if}}
 {{#if newstyle}}
+  CLOSEPOLY()
   FILL []
 {{else}}
   FILL {}
